@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/home/navbar/navbar.css">
+<link rel="stylesheet" href="../static/home/hero/hero.css">
+<link rel="stylesheet" href="../static/home/testimonial/testimonial.css">
+<link rel="stylesheet" href="../static/home/contact/contact.css">
+<link rel="stylesheet" href="../static/home/footer/footer.css">
+{% endblock %}
+
+{% block content %}
+
+{% include 'components/navbar.html' %}
+{% include 'components/hero.html' %}
+{% include 'components/features.html' %}
+{% include 'components/carrousel.html' %}
+{% include 'components/testimonial.html' %}
+{% include 'components/contact.html' %}
+{% include 'components/footer.html' %}
+
+{% endblock %}
+
+{% block script %}
+<script src="../static/controllers/home.js"></script>
+{% endblock %}

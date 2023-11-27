@@ -1,0 +1,18 @@
+# Ignorar archivos y directorios generados por PyCharm
+.idea/
+
+# Ignorar archivos de caché de Python
+__pycache__/
+
+# Ignorar archivos de configuración de Python
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos de respaldo y temporales
+*~
+*.bak
+
+# Ignorar el entorno virtual de Python (si estás usando virtualenv o venv)
+venv/
+env/
