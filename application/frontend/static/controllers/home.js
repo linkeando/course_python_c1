@@ -15,6 +15,7 @@ class Home {
     }
 
     async handleRegisterClick() {
+        console.log('entro')
         const data = {name: 'John', age: 30};
         const serverHandler = new ServerHandler(this.SERVER);
 
