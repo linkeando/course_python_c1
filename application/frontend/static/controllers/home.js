@@ -1,6 +1,11 @@
 class Home {
+    SERVER = '/home'
+    ENDPOINT_REGISTER = 'add_user'
+    ENDPOINY_LOGIN = 'login_user'
+
+
     constructor() {
-        this.sweetAlert = new SweetAlertWrapper();
+        this.ALERT = new SweetAlertWrapper();
 
         this.registerButton = document.getElementById('registroButton');
         this.loginButton = document.getElementById('loginButton');
@@ -10,11 +15,19 @@ class Home {
     }
 
     async handleRegisterClick() {
-        this.sweetAlert.showInfo('Registro', 'Haz clic en el botón de registro');
+        const data = {name: 'John', age: 30};
+        const serverHandler = new ServerHandler(this.SERVER);
+
+        const response = await serverHandler.postData(this.ENDPOINT_REGISTER, data);
+
+        if (response) {
+            this.ALERT.showSuccess('Entro al server', response.message);
+        }
     }
 
+
     async handleLoginClick() {
-        this.sweetAlert.showInfo('Login', 'Haz clic en el botón de login');
+        this.ALERT.showInfo('Login', 'Haz clic en el botón de login');
     }
 }
 
